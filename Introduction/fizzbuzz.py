@@ -17,39 +17,46 @@
 
 # PEP8 = style guide for python. Read link sent.
 
+
+# # 1. Initial fizzbuzz
+
 # for number in range(1, 101):
 #     if number % 3 == 0 and number % 5 == 0:
-#         print("FizzBuzz!")
+#         print("FizzBuzz")
 #     elif number % 3 == 0:
-#         print("Fizz!")
+#         print("Fizz")
 #     elif number % 5 == 0:
-#         print("Buzz!")
+#         print("Buzz")
 #     else:
 #         print(number)
 
-# # custom user start and end values
+
+# # 2. Custom user start and end values
+
 # start = int(input("What number would you like to start from?\n"))
 # end = int(input("What number would you like to end on?\n"))
 #
-# for number in range(start, end + 1):
+# for number in range(start, end+1):
 #     if number % 3 == 0 and number % 5 == 0:
-#         print("FizzBuzz!")
+#         print("FizzBuzz")
 #     elif number % 3 == 0:
-#         print("Fizz!")
+#         print("Fizz")
 #     elif number % 5 == 0:
-#         print("Buzz!")
+#         print("Buzz")
 #     else:
 #         print(number)
 
-# # custom user fizz and buzz words
+
+# # 3. Custom user fizz and buzz words
+
 # start = int(input("What number would you like to start from?\n"))
 # end = int(input("What number would you like to end on?\n"))
 # fizz = input("Fizz is pretty boring, what word would you prefer to use?\n")
-# buzz = input("Buzz isn't actually that bad, but I know we can still do better...\n")
+# buzz = input("Buzz isn't that bad, but I know we can still choose a better word...\n")
 #
-# for number in range(start, end + 1):
+# for number in range(start, end+1):
 #     if number % 3 == 0 and number % 5 == 0:
-#         print(fizz + buzz)
+#         print(fizz+buzz)
 #     elif number % 3 == 0:
 #         print(fizz)
 #     elif number % 5 == 0:
@@ -57,16 +64,18 @@
 #     else:
 #         print(number)
 
-# # custom user increment value
+
+# # 4. Custom user increment value
+
 # start = int(input("What number would you like to start from?\n"))
 # end = int(input("What number would you like to end on?\n"))
 # fizz = input("Fizz is pretty boring, what word would you prefer to use?\n")
 # buzz = input("Buzz isn't actually that bad, but I know we can still do better...\n")
 # increment = int(input("What increment value would you like to have?\n"))
 #
-# for number in range(start, end + 1, increment):
+# for number in range(start, end+1, increment):
 #     if number % 3 == 0 and number % 5 == 0:
-#         print(fizz + buzz)
+#         print(fizz+buzz)
 #     elif number % 3 == 0:
 #         print(fizz)
 #     elif number % 5 == 0:
