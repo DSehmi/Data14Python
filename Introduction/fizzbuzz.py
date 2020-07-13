@@ -86,21 +86,56 @@
 
 # # 5. Custom values for fizz and buzz
 
-# start = int(input("What number would you like to start from?\n"))
-# end = int(input("What number would you like to end on?\n"))
-# fizz_value = int(input("What fizz number would you like?\n"))
-# buzz_value = int(input("What buzz number would you like?\n"))
-# fizz = input("Fizz is pretty boring, what word would you prefer to use?\n")
-# buzz = input("Buzz isn't actually that bad, but I know we can still do better...\n")
-# increment = int(input("What increment value would you like to have?\n"))
-# 
-#
-# for number in range(start, end+1, increment):
-#     if number % fizz_value == 0 and number % buzz_value == 0:
-#         print(fizz+buzz)
-#     elif number % fizz_value == 0:
-#         print(fizz)
-#     elif number % buzz_value == 0:
-#         print(buzz)
-#     else:
-#         print(number)
+start = ""
+end = ""
+fizz_value = ""
+buzz_value = ""
+increment = ""
+
+while not start.isnumeric():
+    start = input("What number would you like to start from?\n")
+    if not start.isnumeric():
+        print("That is not a number, try again")
+
+start = int(start)
+
+while not end.isnumeric():
+    end = input("What number would you like to end on?\n")
+    if not end.isnumeric():
+        print("That is not a number, try again")
+
+end = int(end)
+
+while not fizz_value.isnumeric():
+    fizz_value = input("What fizz number would you like?\n")
+    if not fizz_value.isnumeric():
+        print("That is not a number, try again")
+
+fizz_value = int(fizz_value)
+
+while not buzz_value.isnumeric():
+    buzz_value = input("What buzz number would you like?\n")
+    if not buzz_value.isnumeric():
+        print("That is not a number, try again")
+
+buzz_value = int(buzz_value)
+
+while not increment.isnumeric():
+    increment = input("What increment value would you like to have?\n")
+    if not increment.isnumeric():
+        print("That is not a number, try again")
+
+increment = int(increment)
+
+fizz = input("Fizz is a pretty rubbish word, what else can we use?\n")
+buzz = input("Buzz isn't actually that bad, but I know we can still do better...\n")
+
+for number in range(start, end+1, increment):
+    if number % fizz_value == 0 and number % buzz_value == 0:
+        print(fizz+buzz)
+    elif number % fizz_value == 0:
+        print(fizz)
+    elif number % buzz_value == 0:
+        print(buzz)
+    else:
+        print(number)
