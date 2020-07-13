@@ -4,8 +4,6 @@
 #   keeps track of the score
 
 
-
-
 # class Game:
 #
 #     def __init__(self):
@@ -15,7 +13,7 @@
 import hangman_brain as hb
 
 secret_word = hb.secret_word.get_word()
-print(secret_word)
+
 
 user_guess_list = []
 user_guesses = []
@@ -43,8 +41,7 @@ while True:
 
         while True:
 
-            print("Guess a letter:")
-            letter = input()
+            letter = input("Guess a letter:\n").upper()
 
             if letter in user_guesses:
                 print("You already guessed this letter, try something else.")
