@@ -14,7 +14,6 @@ import hangman_brain as hb
 
 secret_word = hb.secret_word.get_word()
 
-
 user_guess_list = []
 user_guesses = []
 play_game = True
@@ -77,6 +76,7 @@ while True:
         if continue_game.upper() == "Y":
             user_guess_list = []
             user_guesses = []
+            secret_word = hb.secret_word.get_new_word()
             play_game = True
         else:
             print("Thank you for playing. See you next time!")
