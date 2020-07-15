@@ -12,22 +12,25 @@ class Game:
         self.attempts = (len(self.secret_word) + 3)
         self.get_guessed_letter()
         self.view()
-        self.run()
+        self.main_body()
 
     def user(self):
+        # Prompt user to enter name
         name = input("Please enter your name\n")
         print(f"Hello {name.capitalize()}, let's play Hangman!")
 
     def get_guessed_letter(self):
+        # Add user's guesses to a list
         return "Your secret word is: " + ''.join(self.user_guess_list)
 
     def view(self):
+        # Display hidden word and number of attempts remaining
         for letter in self.secret_word_list:
             self.user_guess_list.append("_")
         print(self.get_guessed_letter())
         print("You have ", self.attempts, " attempts remaining!")
 
-    def run(self):
+    def main_body(self):
         while True:
             letter = input("Guess a letter:\n").upper()
 
@@ -36,12 +39,13 @@ class Game:
 
             else:
                 self.attempts -= 1
-                self.user_guesses.append(letter)
+                self.user_guesses.append(letter)  # Adds guessed letter to list
                 if letter in self.secret_word_list:
                     print("Nice guess!")
                     if self.attempts > 0:
                         print("You have ", self.attempts, " attempts left!")
                     for i in range(len(self.secret_word_list)):
+                        # If letter is correct, updates displayed hidden word
                         if letter == self.secret_word_list[i]:
                             letter_index = i
                             self.user_guess_list[letter_index] = letter.upper()
@@ -55,6 +59,7 @@ class Game:
             joined_list = ''.join(self.user_guess_list)
             if joined_list.upper() == self.secret_word.upper():
                 print("Yay! Congratulations, you won.")
+                self.new_game()
                 break
             elif self.attempts == 0:
                 print("You have run out of guesses! Sorry, better luck next time.")
@@ -63,6 +68,7 @@ class Game:
                 break
 
     def play_new_game(self):
+        # Ensure word generated in new game is a new one
         self.secret_word = hb.secret_word.get_new_word()
         return self.secret_word
 
