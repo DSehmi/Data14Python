@@ -1,76 +1,83 @@
 import hangman_brain as hb
 
-secret_word = hb.secret_word.get_word()
 
-user_guess_list = []
-user_guesses = []
-play_game = True
-continue_game = "Y"
+class Game:
 
-name = input("Enter your name\n")
-print(f"Hello {name.capitalize()}, let's play Hangman!")
+    def __init__(self):
+        self.user()
+        self.secret_word = hb.secret_word.get_word()
+        self.user_guess_list = []
+        self.user_guesses = []
+        self.secret_word_list = list(self.secret_word)
+        self.attempts = (len(self.secret_word) + 3)
+        self.get_guessed_letter()
+        self.view()
+        self.main_body()
 
-while True:
+    def user(self):
+        # Prompt user to enter name
+        name = input("Please enter your name\n")
+        print(f"Hello {name.capitalize()}, let's play Hangman!")
 
-    if play_game:
+    def get_guessed_letter(self):
+        # Add user's guesses to a list
+        return "Your secret word is: " + ''.join(self.user_guess_list)
 
-        secret_word_list = list(secret_word)
-        attempts = (len(secret_word) + 3)
+    def view(self):
+        # Display hidden word and number of attempts remaining
+        for letter in self.secret_word_list:
+            self.user_guess_list.append("_")
+        print(self.get_guessed_letter())
+        print("You have ", self.attempts, " attempts remaining!")
 
-        def get_guessed_letter():
-            print("Your secret word is: " + ''.join(user_guess_list))
-
-        for letter in secret_word_list:
-            user_guess_list.append("_")
-        get_guessed_letter()
-
-        print("You have ", attempts, " attempts!")
-
+    def main_body(self):
         while True:
-
             letter = input("Guess a letter:\n").upper()
 
-            if letter in user_guesses:
+            if letter in self.user_guesses:
                 print("You already guessed this letter, try something else.")
 
             else:
-                attempts -= 1
-                user_guesses.append(letter)
-                if letter in secret_word_list:
+                self.attempts -= 1
+                self.user_guesses.append(letter)  # Adds guessed letter to list
+                if letter in self.secret_word_list:
                     print("Nice guess!")
-                    if attempts > 0:
-                        print("You have ", attempts, " attempts left!")
-                    for i in range(len(secret_word_list)):
-                        if letter == secret_word_list[i]:
+                    if self.attempts > 0:
+                        print("You have ", self.attempts, " attempts left!")
+                    for i in range(len(self.secret_word_list)):
+                        # If letter is correct, updates displayed hidden word
+                        if letter == self.secret_word_list[i]:
                             letter_index = i
-                            user_guess_list[letter_index] = letter.upper()
-                    get_guessed_letter()
+                            self.user_guess_list[letter_index] = letter.upper()
+                    print(self.get_guessed_letter())
                 else:
                     print("Oops! Try again.")
-                    if attempts > 0:
-                        print("You have ", attempts, " attempts left!")
-                    get_guessed_letter()
+                    if self.attempts > 0:
+                        print("You have ", self.attempts, " attempts left!")
+                    print(self.get_guessed_letter())
 
-            joined_list = ''.join(user_guess_list)
-            if joined_list.upper() == secret_word.upper():
+            joined_list = ''.join(self.user_guess_list)
+            if joined_list.upper() == self.secret_word.upper():
                 print("Yay! Congratulations, you won.")
+                self.new_game()
                 break
-            elif attempts == 0:
-                print("Too many guesses! Sorry, better luck next time.")
-                print("The secret word was: " + secret_word.upper())
+            elif self.attempts == 0:
+                print("You have run out of guesses! Sorry, better luck next time.")
+                print("The secret word was: " + self.secret_word)
+                self.new_game()
                 break
 
+    def play_new_game(self):
+        # Ensure word generated in new game is a new one
+        self.secret_word = hb.secret_word.get_new_word()
+        return self.secret_word
+
+    def new_game(self):
         continue_game = input("Do you want to play again? Y to continue, any other key to quit\n")
         if continue_game.upper() == "Y":
-            user_guess_list = []
-            user_guesses = []
-            secret_word = hb.secret_word.get_new_word()
-            play_game = True
+            self.play_new_game()
         else:
             print("Thank you for playing. See you next time!")
-            break
-    else:
-        break
 
 
-
+run_game = Game()
