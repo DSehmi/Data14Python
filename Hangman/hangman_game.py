@@ -1,15 +1,3 @@
-# hangman 'game' class:
-#   handle game logic
-#   get guesses off the player
-#   keeps track of the score
-
-
-# class Game:
-#
-#     def __init__(self):
-#         self.word_length = len(secret_word)
-#         self.lives = len(secret_word) + 3
-
 import hangman_brain as hb
 
 secret_word = hb.secret_word.get_word()
@@ -65,7 +53,7 @@ while True:
 
             joined_list = ''.join(user_guess_list)
             if joined_list.upper() == secret_word.upper():
-                print("Yay! You won.")
+                print("Yay! Congratulations, you won.")
                 break
             elif attempts == 0:
                 print("Too many guesses! Sorry, better luck next time.")

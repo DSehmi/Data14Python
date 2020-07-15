@@ -15,10 +15,10 @@ class Brain:
         return self.word.upper()
 
     def get_new_word(self):
-        new_word = r.choice(word_list)
-        if self.word == secret_word:
-            new_word = r.choice(word_list)
-        return new_word
+        self.word = r.choice(word_list)
+        # if self.word == secret_word:
+        #     self.word = r.choice(word_list)
+        return self.word
 
 
 secret_word = Brain()
