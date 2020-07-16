@@ -1,3 +1,9 @@
+# Encapsulation
+# Abstraction
+# Inheritance
+# Polymorphism
+# cd onedrive/week5/4_pillars_of_OOP
+
 class Animal:
     def __init__(self, name, legs):
         self.name = name

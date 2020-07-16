@@ -153,15 +153,16 @@ def number_check(prompt):
     return number
 
 
-start_number = number_check("Please enter a start number\n")
-end_number = number_check("Please enter an end number\n")
-increment = number_check("Please enter an increment level\n")
-
+start = number_check("Please enter a start number\n")
+end = number_check("Please enter an end number\n")
+increment_level = number_check("Please enter an increment level\n")
+fizz_value = int(input("What Fizz number would you like?\n"))
+buzz_value = int(input("What Buzz number would you like?\n"))
 fizz_word = input("Fizz is a pretty rubbish word, what else can we use?\n")
 buzz_word = input("Buzz isn't actually that bad, but I know we can still do better...\n")
 
 
-def fizzbuzz(start, end, increment_level):
+def fizzbuzz(start_number, end_number, increment):
     for number in range(start_number, end_number+1, increment):
         if number % fizz_value == 0 and number % buzz_value == 0:
             print(fizz_word+buzz_word)
@@ -172,6 +173,8 @@ def fizzbuzz(start, end, increment_level):
         else:
             print(number)
 
+
+print(fizzbuzz(start, end, increment_level))
 
 
 

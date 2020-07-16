@@ -44,12 +44,12 @@
 #     105: {'dish': 'lamb in black bean sauce', 'price': 4.50}
 # }
 #
-# #for key in chinese_menu:
-# #    print(chinese_menu[key])
+# for key in chinese_menu:
+#    print(chinese_menu[key])
 # for key in chinese_menu:
 #     print(f"The dish {chinese_menu[key]['dish']} will cost {chinese_menu[key]['price']:.2f}.")
 
 # print(list(range(10)))
-# #
-# # for number in range(10):
-# #     print(number)
+#
+# for number in range(10):
+#     print(number)

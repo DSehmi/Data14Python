@@ -146,7 +146,9 @@
 # fav_animal = input("What is your favourite animal?\n")
 # # Turning a data type into another data type is called CASTING
 #
-# print(f"So your name is {name}, you are {age} years old, you have {num_siblings} siblings, your favourite decimal is {fav_decimal} for some reason, and finally your favourite animal is a {fav_animal}.")
+# print(f"So your name is {name}, you are {age} years old,
+# you have {num_siblings} siblings, your favourite decimal is {fav_decimal} for some reason,
+# and finally your favourite animal is a {fav_animal}.")
 #
 # print(type(name))
 # print(type(age))
@@ -198,8 +200,8 @@ print(bool(z))
 print(bool(a))
 print(bool(b))
 # boolean of 0 is false, boolean of any other number (positive or negative) is true
-# boolean of any string is true, unless if there are no characters
+# boolean of any string is true, unless there are no characters
 
 n = None
 print(bool(n))
-# similar to NULL in SQL, often used as a placeholder
+# None is similar to NULL in SQL, often used as a placeholder

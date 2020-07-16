@@ -31,7 +31,7 @@
 # print(shopping_list.pop())
 # print(shopping_list)
 
-# #TUPLES
+# #TUPLES - denoted by normal brackets ()
 #
 # colours = ("blue", "purple", "turquoise")
 # print(colours)
@@ -45,7 +45,7 @@
 
 # DICTIONARIES
 
-# denoted by curly brackets
+# denoted by curly brackets {}
 # uses key value pairs. key must be unique and value can be anything
 
 # my_dict = {"key": "value", "key2": 2}
@@ -115,12 +115,12 @@
 # print(data14_dict["Subjects"][0])
 # print(data14_dict["Schedule"]["Week 4"])
 
-# # SETS are unordered lists
+# # SETS are unordered lists - denoted by curly brackets but without keys:values
 #
 # car_parts = {"wheels,", "doors", "steering wheel"}
 # print(car_parts)
 #
-# # cannot print(car_parts(0)) as there is no order
+# # cannot print(car_parts(0)) as there is no order to sets
 #
 # # Add elements
 # car_parts.add("pedals")

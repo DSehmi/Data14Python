@@ -16,7 +16,7 @@
 
 # class Dog:
 #
-#     def __init__(self):  # Initialisation
+#     def __init__(self):  # Initialisation (runs instantly)
 #         self.name = "Jimmy"
 #         self.legs = 4
 #         self.animal_type = "Canine"

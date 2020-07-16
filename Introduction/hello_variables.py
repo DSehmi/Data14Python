@@ -1,23 +1,22 @@
-# a = 5
-# print(a)
-# b = 2
-# c = "Hello!"
-# d = 0.25
-# e = True
-# a = (2,3,4)
-#
-# print(a)
-# print(b)
-# print(c)
-# print(d)
-# print(e)
-#
-#
-# print(type(a))
-# print(type(b))
-# print(type(c))
-# print(type(d))
-# print(type(e))
+a = 5  # type: int
+b = 2  # type: int
+c = "Hello!"  # type: str (string)
+d = 0.25  # type: float
+e = True  # type: bool (boolean)
+f = (2, 3, 4)  # type: tuple
+
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
 
 print("What is your name?")
 name = input()
