@@ -1,0 +1,17 @@
+Things to research:
+
+HTTP - what it is, how it works, structure of a http request/response
+REST - Representational State Transfer
+(rest uses http as the protocol that underlies it)
+
+RESTful APIs
+- Representation and data flow
+- Messages
+- Naming resources
+- Statelessness
+- Caching
+
+
+
+SOLID OOP principles (related to 4 pillars)
+- they define what makes a good OOP
