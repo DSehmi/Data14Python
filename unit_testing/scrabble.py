@@ -106,4 +106,4 @@ class Scrabble:
             print("Thank you for playing! See you next time :)")
 
 
-start_game = Scrabble
+start_game = Scrabble()
