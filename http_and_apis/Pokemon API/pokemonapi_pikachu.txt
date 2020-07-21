@@ -1,0 +1,45 @@
+Pikachu
+
+Pikachu is a [] type Pokemon
+
+Pikachu's first ability is static, and the effect Has a 30% chance of paralyzing attacking Pokémon on contact.
+Pikachu's second ability is lightning-rod, and the effect Redirects single-target electric moves to this Pokémon where possible.  Absorbs Electric moves, raising Special Attack one stage.
+
+
+Pikachu has appeared in 20 games
+These games are: ['red', 'blue', 'yellow', 'gold', 'silver', 'crystal', 'ruby', 'sapphire', 'emerald', 'firered', 'leafgreen', 'diamond', 'pearl', 'platinum', 'heartgold', 'soulsilver', 'black', 'white', 'black-2', 'white-2']Pikachu
+
+Pikachu is a [] type Pokemon
+
+Pikachu's first ability is static, and the effect Has a 30% chance of paralyzing attacking Pokémon on contact.
+Pikachu's second ability is lightning-rod, and the effect Redirects single-target electric moves to this Pokémon where possible.  Absorbs Electric moves, raising Special Attack one stage.
+
+
+Pikachu has appeared in 20 games
+These games are: ['red', 'blue', 'yellow', 'gold', 'silver', 'crystal', 'ruby', 'sapphire', 'emerald', 'firered', 'leafgreen', 'diamond', 'pearl', 'platinum', 'heartgold', 'soulsilver', 'black', 'white', 'black-2', 'white-2']
+
+
+electric : 35
+hp : 55
+attack : 40
+defense : 50
+special-attack : 50
+special-defense : 90
+Pikachu
+
+Pikachu is a [] type Pokemon
+
+Pikachu's first ability is static, and the effect Has a 30% chance of paralyzing attacking Pokémon on contact.
+Pikachu's second ability is lightning-rod, and the effect Redirects single-target electric moves to this Pokémon where possible.  Absorbs Electric moves, raising Special Attack one stage.
+
+
+Pikachu has appeared in 20 games
+These games are: ['red', 'blue', 'yellow', 'gold', 'silver', 'crystal', 'ruby', 'sapphire', 'emerald', 'firered', 'leafgreen', 'diamond', 'pearl', 'platinum', 'heartgold', 'soulsilver', 'black', 'white', 'black-2', 'white-2']
+
+
+electric : 35
+hp : 55
+attack : 40
+defense : 50
+special-attack : 50
+special-defense : 90
